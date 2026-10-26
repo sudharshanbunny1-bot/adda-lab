@@ -11,8 +11,8 @@
 	<groupId>com.example</groupId>
 	<artifactId>notes</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>notes</name>
-	<description>Jot - Personal Notebook (Spring Boot Docker AWS App)</description>
+	<name>NoteVault</name>
+	<description>NoteVault - Personal Notes and Knowledge Base (Spring Boot Docker AWS App)</description>
 	<properties>
 		<java.version>21</java.version>
 	</properties>
