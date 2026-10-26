@@ -22,7 +22,7 @@ systemctl enable docker
 systemctl start docker
 
 echo "[5/6] Pulling Spring Boot Docker image from Docker Hub..."
-docker pull sreesanth11/spring-app:v1
+docker pull sudharshanbunny1/spring-app:v1
 docker images
 
 echo "[6/6] Running container on port 8082..."
@@ -34,7 +34,7 @@ docker run -d \
   --name spring-container \
   --restart unless-stopped \
   -p 8082:8082 \
-  sreesanth11/spring-app:v1
+  sudharshanbunny1/spring-app:v1
 
 echo "=============================================================================="
 echo "Deployment Successful!"
