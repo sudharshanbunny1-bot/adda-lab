@@ -37,7 +37,7 @@
             <div class="logo">● NoteVault</div>
             <div class="menu-item">
                 <span>All notes</span>
-                <span th:text="${notes.size()}">1</span>
+                <span>1</span>
             </div>
         </div>
         <div style="font-size:12px; color:#888;">
@@ -53,13 +53,7 @@
             <button class="btn-new" onclick="document.getElementById('noteModal').classList.add('active')">+ New note</button>
         </div>
         <div class="notes-grid">
-            <div class="note-card" th:each="n : ${notes}">
-                <div class="note-date" th:text="${n.date}">26 Oct 2026</div>
-                <div class="note-title" th:text="${n.title}">Assignment Task</div>
-                <div class="note-content" th:text="${n.content}">complete your assignment</div>
-            </div>
-            <!-- Default sample if list is empty for demo view -->
-            <div class="note-card" th:if="${notes.empty}">
+            <div class="note-card">
                 <div class="note-date">26 Oct 2026</div>
                 <div class="note-title">Assignment Task</div>
                 <div class="note-content">complete your assignment</div>
