@@ -19,7 +19,7 @@
         .note-card { background: #fff; border: 1px solid #e5e5e5; border-radius: 8px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.02); }
         .note-date { font-size: 11px; color: #aaa; margin-bottom: 8px; }
         .note-title { font-size: 16px; font-weight: 600; color: #222; margin-bottom: 10px; }
-        .note-content { font-size: 13px; color: #666; line-height: 1.5; }
+        .note-content { font-size: 13px; color: #666; line-height: 1.5; font-weight: 500; }
         .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); justify-content: center; align-items: center; }
         .modal.active { display: flex; }
         .modal-box { background: #fff; padding: 30px; border-radius: 8px; width: 440px; }
@@ -54,15 +54,15 @@
         </div>
         <div class="notes-grid">
             <div class="note-card" th:each="n : ${notes}">
-                <div class="note-date" th:text="${n.date}">22 Oct 2026</div>
-                <div class="note-title" th:text="${n.title}">Note 1</div>
-                <div class="note-content" th:text="${n.content}">This the note text</div>
+                <div class="note-date" th:text="${n.date}">26 Oct 2026</div>
+                <div class="note-title" th:text="${n.title}">Assignment Task</div>
+                <div class="note-content" th:text="${n.content}">complete your assignment</div>
             </div>
             <!-- Default sample if list is empty for demo view -->
             <div class="note-card" th:if="${notes.empty}">
-                <div class="note-date">22 Oct 2026</div>
-                <div class="note-title">Note 1</div>
-                <div class="note-content">This the note text</div>
+                <div class="note-date">26 Oct 2026</div>
+                <div class="note-title">Assignment Task</div>
+                <div class="note-content">complete your assignment</div>
             </div>
         </div>
     </div>
@@ -72,8 +72,8 @@
             <div class="subhead" style="margin-bottom:6px;">A FRESH PAGE</div>
             <h3>New note</h3>
             <form action="/notes" method="post">
-                <input type="text" name="title" placeholder="Note Title" value="Note 1" required>
-                <textarea name="content" placeholder="Write your thoughts..." required>This the note text</textarea>
+                <input type="text" name="title" placeholder="Note Title" value="Assignment Task" required>
+                <textarea name="content" placeholder="Write your thoughts..." required>complete your assignment</textarea>
                 <div class="modal-actions">
                     <button type="button" onclick="document.getElementById('noteModal').classList.remove('active')">Cancel</button>
                     <button type="submit" class="btn-save">Save note →</button>

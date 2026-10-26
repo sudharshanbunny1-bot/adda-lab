@@ -16,6 +16,10 @@ public class NoteController {
 
     public record Note(String title, String content, String date) {}
 
+    public NoteController() {
+        notes.add(new Note("Assignment Task", "complete your assignment", "26 Oct 2026"));
+    }
+
     @GetMapping("/")
     public String index() {
         return "redirect:/login";
